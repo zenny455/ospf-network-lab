@@ -1,15 +1,21 @@
-# 🖧 OSPF Network Lab
+# 🌐 OSPF Network Lab
+
+## 🖼️ Network Topology
+---
+![Network Topology](assets/ospf_lab.jpg)
+
+---
 
 
-### Topology Scale
-- **Routers:** 18  
-- **Switches:** 20  
-- **PCs:** 34
+### 🚀 Topology Scale
+- **🖧 Routers:** 18  
+- **🔀 Switches:** 20  
+- **💻 PCs:** 34
 
 ---  
 
 
-## 1) OSPF implemented
+## 🔹 OSPF implemented
 **OSPF (Open Shortest Path First)** is a **link-state routing protocol**. Routers exchange **Link-State Advertisements (LSAs)** to describe their interfaces and neighbors. Each router builds the same **link-state database (LSDB)** and runs **Dijkstra’s SPF algorithm** to calculate the shortest paths.  
 
 - **Areas:** The network is split into **Area 0 (backbone)** and **Areas 1, 2, 3**.  
@@ -19,12 +25,12 @@
 
 
 
-## 2) IPs are assigned automatically by DHCP
+## 📡 IPs are assigned automatically by DHCP
 A central DHCP service assigns IP addresses, subnet masks, default gateways, and DNS servers automatically (here DNS is not provided). This avoids manual configuration errors and speeds up network deployment.
 
 
 
-## 3) VLANs help bind DHCP to the right interfaces
+## 🧩 VLANs help bind DHCP to the right interfaces
 The network uses **VLANs** to separate devices into logical subnets. Each VLAN:  
 - Maps to one **IP subnet**  
 - Has a dedicated **DHCP pool**  
@@ -34,7 +40,7 @@ This ensures clients receive the correct addressing information for their VLAN.
 
 
 
-## 4) IEEE 802.1Q encapsulation
+## 🔗 IEEE 802.1Q encapsulation
 Links between switches and routers are configured as **802.1Q trunks**. This tagging ensures:  
 - VLAN frames keep their identity end-to-end  
 - DHCP requests from each VLAN are forwarded correctly  
@@ -42,7 +48,7 @@ Links between switches and routers are configured as **802.1Q trunks**. This tag
 
 
 
-## 5) Purpose of this project
+## 🎯 Purpose of this project
 - ✅ Show how OSPF backbone & ABRs provide scalable multi-area routing  
 - ✅ Demonstrate automatic IP allocation with DHCP per VLAN  
 - ✅ Use IEEE 802.1Q encapsulation to carry VLAN traffic across trunks  
@@ -50,7 +56,7 @@ Links between switches and routers are configured as **802.1Q trunks**. This tag
 
 ---
 
-## 📊 Router Configuration Table
+## 📊 Router Configuration Table 🖧
 
 | Router  | Interface   | IP Address       | Area |
 |---------|-------------|------------------|------|
