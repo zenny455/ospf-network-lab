@@ -1,7 +1,7 @@
 # 🖧 OSPF Network Lab
 
 
----
+
 
 ## 1) OSPF implemented
 **OSPF (Open Shortest Path First)** is a **link-state routing protocol**. Routers exchange **Link-State Advertisements (LSAs)** to describe their interfaces and neighbors. Each router builds the same **link-state database (LSDB)** and runs **Dijkstra’s SPF algorithm** to calculate the shortest paths.  
