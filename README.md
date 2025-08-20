@@ -1,6 +1,12 @@
 # 🖧 OSPF Network Lab
 
 
+### Topology Scale
+- **Routers:** 18  
+- **Switches:** 20  
+- **PCs:** 34
+
+---  
 
 
 ## 1) OSPF implemented
@@ -11,12 +17,12 @@
 - **ABR (Area Border Router):** Routers between Area 0 and other areas. They maintain LSDBs for multiple areas and summarize LSAs.  
 - **Result:** With OSPF, all PCs across all areas can connect through shortest, loop-free paths.
 
----
+
 
 ## 2) IPs are assigned automatically by DHCP
 A central DHCP service assigns IP addresses, subnet masks, default gateways, and DNS servers automatically (here DNS is not provided). This avoids manual configuration errors and speeds up network deployment.
 
----
+
 
 ## 3) VLANs help bind DHCP to the right interfaces
 The network uses **VLANs** to separate devices into logical subnets. Each VLAN:  
@@ -26,7 +32,7 @@ The network uses **VLANs** to separate devices into logical subnets. Each VLAN:
 
 This ensures clients receive the correct addressing information for their VLAN.
 
----
+
 
 ## 4) IEEE 802.1Q encapsulation
 Links between switches and routers are configured as **802.1Q trunks**. This tagging ensures:  
@@ -34,7 +40,7 @@ Links between switches and routers are configured as **802.1Q trunks**. This tag
 - DHCP requests from each VLAN are forwarded correctly  
 - Inter-VLAN routing works without confusion  
 
----
+
 
 ## 5) Purpose of this project
 - ✅ Show how OSPF backbone & ABRs provide scalable multi-area routing  
